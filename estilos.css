@@ -3,7 +3,7 @@
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: orange;
+    background-color: violet;
 }
 main{
     max-width: 800px;
@@ -35,7 +35,7 @@ main{
     transition: .3s ease all;
 }
 .formulario__input:focus{
-    border: 3px solid turquoise;
+    border: 3px solid gold;
     outline: none;
 }
 .formulario__input-error{
