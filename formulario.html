@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Formulario con validación y responsive septiembre 23/2020-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de validación</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <main>
+        <form action="" class="formulario" id="formulario">
+            <!--Grupo de usuario-->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="usuario">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error" ><small id="emailHelp" class="form-text text-muted">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras y guión bajo</small></p>
+                
+            </div>
+            
+            <!--Grupo nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="nombre">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error"><small id="emailHelp" class="form-text text-muted">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras y guión bajo</small></p>
+            </div>
+
+             <!--Grupo contraseña-->
+             <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="password" class="formulario__input" name="password" id="password">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error"><small id="emailHelp" class="form-text text-muted">La contraseña debe tener de 4 a 12 dígitos</small></p>
+            </div>
+
+             <!--Grupo repetir contraseña-->
+             <div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="password" class="formulario__input" name="password2" id="password2">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error"><small id="emailHelp" class="form-text text-muted">Ambas contraseñas deben ser iguales</small></p>
+            </div>
+
+             <!--Grupo Correo electrónico-->
+             <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error"><small id="emailHelp" class="form-text text-muted">El correo solo puede contener letras, números, puntos, guiones y guión bajo</small></p>
+            </div>
+
+            <!--Grupo Teléfono-->
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <!--Casilla-->
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="0000000">
+                    <!--Icono-->
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error"><small id="emailHelp" class="form-text text-muted">El teléfono solo puede contener números y el máximo son 10 dígitos</small></p>
+                
+            </div>
+
+            <!--Grupo para términos y condiciones-->
+            <div class="formulario__grupo" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto los términos y condiciones
+                </label>
+            </div>
+        <!--Grupo para términos y condiciones con bootstrap
+        </div> 
+        <div class="form-group"> 
+          <div class="form-check"> 
+            <input class="form-check-input is-invalid" type="checkbox" value="" id="terminos" aria-describedby="terminosFeedback" required> 
+            <label class="form-check-label" for="terminos"> 
+              Acepta los términos y condiciones 
+            </label> 
+            </div> 
+        </div> -->
+
+            <!--Mensaje de Error al enviar el formulario sin datos-->
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente</p>
+
+            </div>
+            
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <!--Botón con bootstrap <button type="submit" class="btn btn-primary">Enviar</button> -->
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió exitosamente</p>
+            </div>
+
+
+        </form>
+
+
+
+
+    </main>
+
+
+
+    <!--Script de javascript-->
+    <script src="js/formulario.js"></script>
+
+
+    <!--Script para iconos-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!--Script bootstrap responsive-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+</body>
+</html>
